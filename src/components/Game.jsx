@@ -11,9 +11,6 @@ class Game extends React.Component {
 
   handleClick(i) {
     const history = this.props.masterGame.history.slice(0, this.props.masterGame.stepNumber + 1);
-    console.log(history[0]);
-    console.log(history[1]);
-    console.log(this.props.masterGame.stepNumber);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (this.calculateWinner(squares) || squares[i]) {
@@ -30,7 +27,7 @@ class Game extends React.Component {
       stepNumber: history.length,
       xIsNext: !this.props.masterGame.xIsNext,
     }
-    console.log(action);
+    console.log(!this.props.masterGame.xIsNext);
     dispatch(action);
   }
 
@@ -67,9 +64,7 @@ class Game extends React.Component {
 
   render() {
     const history = this.props.masterGame.history;
-    console.log(history);
     const current = history[this.props.masterGame.stepNumber];
-    console.log(this.props.masterGame.stepNumber)
     const winner = this.calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
