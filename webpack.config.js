@@ -31,7 +31,7 @@ module.exports = {
 
   module: {
     rules: [
-  
+
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
@@ -55,7 +55,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React Help Queue',
+      title: 'Tic-Tac-Toe',
       filename: resolve(__dirname, "build", "index.html"),
     }),
   ]

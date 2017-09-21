@@ -1,15 +1,14 @@
 import React from "react";
-import Game from "./Game";
 import { Switch, Route } from 'react-router-dom';
+import Game from "./Game";
 // import './../index.css';
 
-function App(){
+function App() {
   return (
     <div>
       <Switch>
         <Route exact path="/" component={Game} />
       </Switch>
-      <p>Hi</p>
     </div>
   );
 }
